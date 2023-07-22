@@ -4,8 +4,8 @@ from pydantic import PostgresDsn
 
 class Settings(BaseSettings):
     APP_PORT: int = 8000
-    REAL_DATABASE_URL: PostgresDsn = "postgresql+asyncpg://postgres:postgres@0.0.0.0:5432/postgres"
-    TEST_DATABASE_URL: PostgresDsn = "postgresql+asyncpg://postgres:postgres@0.0.0.0:5432/postgres_test"
+    REAL_DATABASE_URL: PostgresDsn
+    TEST_DATABASE_URL: PostgresDsn
 
     class Config:
         env_file = ".env"
