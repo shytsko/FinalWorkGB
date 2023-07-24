@@ -5,9 +5,9 @@ from settings import settings
 app = FastAPI()
 
 
-@app.get("/")
-async def index():
-    return {"msg": "Hello world!!!!!", "db": settings.REAL_DATABASE_URL}
+@app.get("/health")
+async def health():
+    return
 
 
 if __name__ == "__main__":
