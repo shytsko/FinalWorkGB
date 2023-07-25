@@ -1,5 +1,6 @@
 from fastapi import APIRouter
-from db.db import init_models
+from db.session import init_models
+from db.models import User
 
 service_router = APIRouter()
 
