@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+from db.db import init_models
 
 service_router = APIRouter()
 
@@ -11,3 +12,8 @@ async def health():
 @service_router.get("/ping")
 async def pong():
     return {"ping": "pong!"}
+
+
+@service_router.get("/init-db")
+async def init_db():
+    await init_models()
